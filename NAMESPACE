@@ -1,0 +1,35 @@
+# Exported functions
+export(anova.grouped, equispaced, grouped, plot.grouped, residuals.grouped, power.grouped, rounding, 
+			summary.grouped, summary.resid.grouped)
+
+# Imported functions
+importFrom(MASS, mvrnorm)
+
+# S3 methods
+S3method(anova, grouped)
+S3method(coefficients, grouped)
+S3method(coefficients, summ.grouped)
+S3method(fitted, grouped)
+S3method(logLik, grouped)
+S3method(print, aov.grouped)
+S3method(print, grouped)
+S3method(print, power.grouped)
+S3method(print, resid.grouped)
+S3method(print, summ.grouped)
+S3method(plot, grouped)
+S3method(residuals, grouped)
+S3method(summary, grouped)
+S3method(summary, resid.grouped)
+S3method(vcov, grouped)
+
+
+
+
+
+
+
+
+
+
+
+

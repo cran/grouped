@@ -1,0 +1,5 @@
+o Generalize functions equispaced() and rounding() for other types of responses.
+
+o Consider discrete minimization for sample size calculations in power.grouped().
+
+o Extend power.grouped() for one-sided tests.

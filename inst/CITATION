@@ -1,0 +1,14 @@
+citHeader("To cite package 'grouped' in publications use:")
+
+citEntry(entry = "Manual",
+         title = "grouped: Regression Analysis of Grouped and Coarse Data",
+         author = personList(as.person("D. Rizopoulos"), as.person("S. Tsonaka")),
+         year         = 2005,
+         note         = "R package version 0.1-0",
+         url          = "http://www.student.kuleuven.ac.be/~m0390867/dimitris.htm",
+         
+         textVersion = 
+         paste("Rizopoulos, D. and Tsonaka, S. (2005)", 
+               "'grouped: Regression Analysis of Grouped and Coarse Data'.",
+               "R package version 0.1-0.")
+)
