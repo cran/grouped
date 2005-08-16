@@ -3,7 +3,7 @@
 \title{Power and sample size calculations for grouped data}
 \description{Uses the method of Tsonaka, Rizopoulos and Lesaffre (2005) to estimate the power
              (or sample size to achieve desired power) of the Wald's test statistic
-             for two group comparisons in grouped data. }
+             for two-tailed two group comparisons in grouped data. }
 \usage{
 power.grouped(n = NULL, m, X = NULL, theta, sigma, sign.level = 0.05,
                 type.power = c("conditional", "marginal"), MC.iter = 10,
@@ -61,19 +61,19 @@ power.grouped(n = NULL, m, X = NULL, theta, sigma, sign.level = 0.05,
     of this method is that it allows for covariate adjustments that can considerably increase the power. 
     
     Two types of the power function are considered: the conditional and the marginal (i.e., argument \code{type.power}).
-    The conditional power function assumes that the values of the covariates are known and can
+    The conditional power function \eqn{p_c(X)} assumes that the values of the covariates are known and can
     be used for post-hoc power analysis. In particular, it is assumed that the Wald's test follows a non central 
     Student's-t under the alternative hypothesis with power function given by 
-    \deqn{p_c(X) = 1 - F_{t_{\nu, \delta}}(t_{\nu, 1-\alpha/2} | H_a; X) + 
-    F_{t_{\nu, \delta}}(t_{\nu, \alpha/2} | H_a; X),}{p_c(X) = 
+    \deqn{p_c(X) = 1 - F_{\nu, \delta}(t_{\nu, 1-\alpha/2} | H_a; X) + 
+    F_{\nu, \delta}(t_{\nu, \alpha/2} | H_a; X),}{p_c(X) = 
     1 - F_{nu, delta}(t_nu, 1-alpha/2 | H_a; X) + F_{nu, delta}(t_nu, alpha/2 | H_a; X),} 
-    where \eqn{F_{t_{\nu, \delta}}}{F_{t_{nu, delta}}} is the distribution function of the non-central 
-    Student's-t distribution with \eqn{\nu}{nu} degrees of freedom and non-centrality parameter \eqn{\delta}, 
+    where \eqn{F_{\nu, \delta}}{F_{nu, delta}} is the distribution function of the non-central 
+    Student's-t distribution with \eqn{\nu} degrees of freedom and non-centrality parameter \eqn{\delta}, 
     \eqn{\alpha} is the type I error (i.e., argument \code{sign.level}) and \eqn{X} the realized values of 
     the covariates. The marginal power function (mainly used for sample size calculations) acknowledges that prior 
     to a study the actual values of the covariates are not known and is defined as the expected value of the 
-    conditional power \deqn{p_m = \int p_c(x) dH(x),} with respect to the assumed distribution of the covariates 
-    \eqn{H(x)}, based on pilot or historical data. This expectation is approximated using Monte Carlo integration.         
+    conditional power \deqn{p_m = \int p_c(X) dH(X),} with respect to the assumed distribution of the covariates 
+    \eqn{H(X)}, based on pilot or historical data. This expectation is approximated using Monte Carlo integration.         
     
     In order to reduce the computational burden (induced by the Monte Carlo integration) for sample size 
     calculation, an approximation to the likelihood is performed using a first order Taylor series expansion 

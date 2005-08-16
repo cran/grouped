@@ -13,7 +13,7 @@ grouped(formula, link = c("identity", "log", "logit"),
 \arguments{
   \item{formula}{ a two-sided formula describing the model structure. In the left-hand side, a two-column response 
                 matrix must be supplied, specifying the lower and upper limits (1st and 2nd column, respectively)
-                of the interval in which the true response lies. They can be defined arbitrary or you can use the 
+                of the interval in which the true response lies. They can be defined arbitrarily or you can use the 
                 functions \code{\link{equispaced}} and \code{\link{rounding}}. }
   \item{link}{ the link function under which the underlying response variable follows the distribution given by the 
                 \code{distribution} argument. Available choices are \code{"identity"}, \code{"log"} and \code{"logit"}. 
@@ -28,7 +28,8 @@ grouped(formula, link = c("identity", "log", "logit"),
   \item{str.values}{ a numeric vector of starting values. }
   \item{df}{ a scalar numeric value denoting the degrees of freedom when the underlying distribution for the response
                 variable is assumed to be Student's-\eqn{t}. }
-  \item{iter}{ the number of extra times to call \code{optim} in case the first optimization fails.}
+  \item{iter}{ the number of extra times to call \code{optim} in case the first optimization has not
+                converged.}
   \item{\dots}{ additional arguments; currently none is used. }
 }
 \details{
@@ -42,13 +43,18 @@ grouped(formula, link = c("identity", "log", "logit"),
   \eqn{Y_{li}} and \eqn{Y_{ui}}, i.e., the interval in which \eqn{Z_i} lies. Given some covariates \eqn{X_i}, 
   \eqn{Z_i|X_i} may assume either a Normal, a Logistic or (generalized) Student's-t distribution. In addition three 
   link functions are available for greater flexibility. In particular, the likelihood is of the following form 
-  \deqn{L(\beta, \sigma) = \prod\limits_{i=1}^n F([y_{ui}^* - x_i^t\beta]/\sigma) - F([y_{li}^* - x_i^t\beta]/\sigma),}{L
-  (\beta, \sigma) = F[(y_u - x\beta)/\sigma] - F[(y_l - x\beta)/\sigma],}
+  \deqn{L(\beta, \sigma) = \prod\limits_{i=1}^n F([y_{ui}^* - x_i^t\beta]/\sigma) - F([y_{li}^* - x_i^t\beta]/
+  \sigma),}{L_i(\beta, \sigma) = F[(y_u^* - x\beta)/\sigma] - F[(y_l^* - x\beta)/\sigma],}
   where \eqn{F(\cdot)}{F(.)} denotes the cdf of the assumed distribution given by the argument \code{distribution} and 
   \eqn{y_{li}^* = \phi(y_{li})}{y_l^* = \phi(y_l)}, where \eqn{\phi(\cdot)}{\phi(.)} denotes the link function, 
-  and \eqn{y_{ui}^*}{y_u} is defined analogously. Examples of grouped and coarse data can be found in 
-  Heitjan (1989; 1993) and Lesaffre et al. (2005).
+  and \eqn{y_{ui}^*}{y_u} is defined analogously. 
+  
+  An interesting example of coarse data is the various quality of life indexes. The observed value of such indexes can
+  be thought of as a rounded version of the \emph{true} latent quality of life that the index attempts to capture. 
+  Applications of this approach can be found in Lesaffre et al. (2005) and Tsonaka et al. (2005). Various other 
+  examples of grouped and coarse data can be found in Heitjan (1989; 1993).
 }
+
 \value{
   an object of class \code{grouped} is a list with the following components:
   \item{coefficients}{the estimated coefficients, including the standard deviation \eqn{\sigma}.}

@@ -3,7 +3,7 @@
 \docType{data}
 \title{Simulated Data}
 \description{
-  A simulated data-set for the illustration of \code{\link{grouped}} for grouped data 
+  A simulated data-set used for the illustration of \code{\link{grouped}} for grouped data 
   coming from a logit-normal distribution.
 }
 \format{
@@ -16,7 +16,7 @@
   }
 }
 \details{
-  The data set has been produced with the code in the \bold{Examples} below
+  The data set has been produced with the code in the \bold{Examples} below.
 }
 
 \author{

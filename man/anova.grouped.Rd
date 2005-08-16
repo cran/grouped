@@ -19,7 +19,7 @@
   \item{df0}{the number of parameters in \code{object}.}
   \item{AIC0}{the AIC under \code{object}.}
   \item{BIC0}{the BIC under \code{object}.}
-  \item{name1}{the name of the null model represented by \code{object2}.}
+  \item{name1}{the name of the alternative model represented by \code{object2}.}
   \item{L1}{the log-likelihood under \code{object2}.}
   \item{df1}{the number of parameters in \code{object2}.}
   \item{AIC1}{the AIC under \code{object2}.}

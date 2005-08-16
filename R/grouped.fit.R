@@ -11,7 +11,7 @@ function(y, X, link, distribution, df., starts, iter){
     if(px == 0)
         return(list(coefficients = NULL, logLik = NULL, hessian = NULL, k = NULL, n = n))
     if(!is.matrix(y) || ncol(y) != 2)
-        stop("The response must be a two column matrix.\n")
+        stop("The response must be a two-column matrix.\n")
     if(n != nrow(y))
         stop("the dimensions of `y' and `X' do not mutch.\n")
     a <- y[, 1]

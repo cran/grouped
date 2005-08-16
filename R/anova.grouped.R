@@ -15,7 +15,7 @@ function(object, object2, ...){
     if(dets0$link != dets1$link)
         stop("the two models assume different link functions.\n")
     if(dets0$distr != dets1$distr)
-        stop("the two models assume different distribution for the random-effect.\n")
+        stop("the two models assume different distribution for the unerlying true response variable.\n")
     df0 <- length(object$coef)
     df1 <- length(object2$coef)
     if(df0 >= df1)
