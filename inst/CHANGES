@@ -1,3 +1,9 @@
+Changes in version: grouped_0.2-0
+
+  o format.char() changed to format() in print.power.grouped().
+
+==========================================================
+
 Changes in version: grouped_0.1-1
 
   o corrected some typos in manual files.
