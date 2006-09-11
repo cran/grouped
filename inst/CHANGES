@@ -1,3 +1,11 @@
+Changes in version: grouped_0.3-0
+
+  o coef method corrected.
+
+  o correct typos and update Rd files.
+
+==========================================================
+
 Changes in version: grouped_0.2-0
 
   o format.char() changed to format() in print.power.grouped().

@@ -7,8 +7,8 @@ importFrom(MASS, mvrnorm)
 
 # S3 methods
 S3method(anova, grouped)
-S3method(coefficients, grouped)
-S3method(coefficients, summ.grouped)
+S3method(coef, grouped)
+S3method(coef, summ.grouped)
 S3method(fitted, grouped)
 S3method(logLik, grouped)
 S3method(print, aov.grouped)

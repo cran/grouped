@@ -79,10 +79,10 @@ Heitjan, D. (1993) Ignorability and coarse data: some biomedical examples. \emph
 Heitjan, D. and Rubin, D. (1991) Ignorability and coarse data. \emph{Annals of Statistics}, \bold{19}, 2244--2253.
 
 Lesaffre, E., Rizopoulos, D. and Tsonaka, S. (2005) The logistic-transform for bounded 
-outcome scores. \emph{submitted for publication}.
+outcome scores. \emph{Biostatistics} (to appear).
 
 Tsonaka, S., Rizopoulos, D. and Lesaffre, E. (2005) Power and sample size calculations for discrete 
-bounded outcomes. \emph{submitted for publication}.
+bounded outcomes. \emph{Statistics in Medicine} (to appear).
 }
 
 \author{
