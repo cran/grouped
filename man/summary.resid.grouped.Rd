@@ -24,7 +24,7 @@ having an absolute residual greater than the value given by \code{K}. If \code{!
 the first column of the matrix.}
 
 \author{
-    Dimitris Rizopoulos \email{dimitris.rizopoulos@med.kuleuven.be}
+    Dimitris Rizopoulos \email{d.rizopoulos@erasmusmc.nl}
 }
 
 \seealso{ \code{\link{residuals.grouped}} }

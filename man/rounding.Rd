@@ -22,7 +22,7 @@ rounding(y, m)
 \value{ a 2-dimensional matrix containing the lower and upper limits of the intervals. }
 
 \author{
-    Dimitris Rizopoulos \email{dimitris.rizopoulos@med.kuleuven.be}
+    Dimitris Rizopoulos \email{d.rizopoulos@erasmusmc.nl}
 }
 
 \seealso{ \code{\link{grouped}} }
