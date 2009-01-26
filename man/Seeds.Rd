@@ -27,6 +27,6 @@ summary(Seeds)
 
 }
 \source{
-  Crowder, M. (1978) Beta-Binomial ANOVA for proportions. \emph{Applied Statistics}, \textbf{35}, 34--37.
+  Crowder, M. (1978) Beta-Binomial ANOVA for proportions. \emph{Applied Statistics}, 35, 34--37.
 }
 \keyword{datasets}
